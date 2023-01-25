@@ -1,0 +1,192 @@
+/* Reset All CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff2)
+      format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIRegular.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ColfaxAI";
+  src: url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff2) format("woff2"),
+    url(https://cdn.openai.com/API/fonts/ColfaxAIBold.woff) format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* .app {
+  position: relative;
+} */
+
+.main {
+  display: flex;
+  min-height: 100vh;
+  background-color: rgb(52, 53, 65);
+  justify-content: center;
+  padding: 4rem 0 0;
+}
+
+.inner-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content-container {
+  /* style p and h3 so that they remain responsive and the div gets a max-width */
+  max-width: 600px;
+  padding: 2rem 1rem;
+}
+
+.main,
+.main .form-input {
+  font-size: 16px;
+  line-height: 24px;
+  color: #353740;
+  font-family: "ColfaxAI", Helvetica, sans-serif;
+}
+
+.main label,
+.main p {
+  color: white;
+}
+
+.information {
+  color: #8e8ea0;
+}
+
+.main .icon {
+  width: 34px;
+}
+.main h3 {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: bold;
+  color: white;
+  margin: 16px 0 40px;
+}
+.main form {
+  display: flex;
+  flex-direction: column;
+}
+.form-group {
+  margin: 1rem 0;
+}
+
+.form-input {
+  padding: 12px 16px;
+  border: 1px solid rgb(218, 156, 255);
+  border-radius: 4px;
+  width: 100%;
+  margin: 0.5rem 0;
+  outline-color: rgb(218, 156, 255);
+}
+.main ::placeholder {
+  color: #8e8ea0;
+  opacity: 1;
+}
+.submit-btn {
+  margin: 1rem 0;
+  padding: 12px 0;
+  color: #fff;
+  background-color: rgb(218, 156, 255);
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+.main .result {
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+.result {
+  color: white;
+}
+
+.information {
+  margin: 2rem 0;
+  color: #8e8ea0;
+  font-size: 12px;
+}
+
+.information a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Preloader CSS */
+.preloader-container {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: #1c1717;
+  display: grid;
+  place-items: center;
+}
+@property --a {
+  initial-value: 0deg;
+  inherits: false;
+  syntax: "<angle>";
+}
+@property --h {
+  initial-value: 0;
+  inherits: false;
+  syntax: "<number>";
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem 4rem;
+  font-family: monospace;
+  font-weight: bold;
+  color: #fff;
+  border-style: solid;
+  border-width: 1vmin;
+  font-size: 2rem;
+  --charge: hsl(var(--h, 0), 80%, 50%);
+  -o-border-image: conic-gradient(
+      var(--charge) var(--a),
+      transparent calc(var(--a) + 0.5deg)
+    )
+    30;
+  border-image: conic-gradient(
+      var(--charge) var(--a),
+      transparent calc(var(--a) + 0.5deg)
+    )
+    30;
+  -webkit-animation: load 2s infinite ease-in-out;
+  animation: load 2s infinite ease-in-out;
+}
+@-webkit-keyframes load {
+  0%,
+  10% {
+    --a: 0deg;
+    --h: 0;
+  }
+  100% {
+    --a: 360deg;
+    --h: 100;
+  }
+}
+@keyframes load {
+  0%,
+  10% {
+    --a: 0deg;
+    --h: 0;
+  }
+  100% {
+    --a: 360deg;
+    --h: 100;
+  }
+}
