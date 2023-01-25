@@ -24,7 +24,7 @@ router.post("/generate", async (req, res) => {
       temperature: 0.7,
       prompt: `Hi, my name is ${name}.
       I would like to learn ${stack} and I like/love/know ${language}. 
-      Please suggest me a learning plan/stack which I can follow. 
+      Please suggest me a complete learning path/plan/stack which I can follow. 
       Try to be as specific as possible and return the response within 500 words. 
       In response, have my name with a Hi at the top. 
       `,
