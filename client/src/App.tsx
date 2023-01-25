@@ -26,7 +26,7 @@ function App() {
     try {
       setIsLoading(true);
       const { data } = await axios.post(
-        `${REACT_APP_SERVER_URL}/api/generate}`,
+        `${process.env.REACT_APP_SERVER_URL}/api/generate}`,
         formData
       );
       console.log(data);
