@@ -26,7 +26,7 @@ function App() {
     try {
       setIsLoading(true);
       const { data } = await axios.post(
-        "https://chatgpt-demo-app-backend.vercel.app/api/generate",
+        "https://chatgpt-demo-production.up.railway.app/api/generate",
         formData
       );
       console.log(data);
