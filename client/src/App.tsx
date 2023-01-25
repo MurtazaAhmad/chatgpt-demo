@@ -26,7 +26,7 @@ function App() {
     try {
       setIsLoading(true);
       const { data } = await axios.post(
-        `${process.env.REACT_APP_SERVER_URL}/api/generate}`,
+        "https://chatgpt-demo-app-backend.vercel.app/api/generate}",
         formData
       );
       console.log(data);
@@ -44,6 +44,7 @@ function App() {
       // setContent(data);
     } catch (error: any) {
       alert("Something went wrong, please try again later.");
+      setIsLoading(false);
       console.log(error);
       alert(error.message);
     }
