@@ -33,7 +33,6 @@ function App() {
       if (data.status === "success") {
         //save response in content variable
         const { message } = data;
-
         setContent(data.message);
         //set loading to false
         setIsLoading(false);
