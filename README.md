@@ -6,9 +6,9 @@ A ChatGPT API Implementation demo project using React (Vite), Typescript & Expre
 1. If you don’t have Node.js installed, [install it from here](https://nodejs.org/en/) (Node.js version >= 14.6.0 required)
 2. Clone this repository
 3. Navigate into the 'client' directory
-```bash
-   $ cd client
-   ```
+   ```bash
+      $ cd client
+      ```
 4. Install the requirements
 
    ```bash
@@ -18,7 +18,7 @@ A ChatGPT API Implementation demo project using React (Vite), Typescript & Expre
 ```bash
    $ cd server
    ```
-6.Install the requirements in the server directory
+6. Install the requirements in the server directory
 
    ```bash
    $ npm install
