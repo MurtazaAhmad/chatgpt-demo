@@ -5,11 +5,16 @@ import axios from "axios";
 // Types
 
 function App() {
+  const url = "https://chatgpt-demo-production.up.railway.app/api/generate";
+  // For running locally, uncomment this line and comment the above line
+  // const url = "http://localhost:4000/api/generate";
+
   const [formData, setFormData] = useState({
     name: "",
     language: "",
     stack: "",
   });
+
   const [isLoading, setIsLoading] = useState(false);
 
   const contentRef = useRef<HTMLDivElement>(null);
@@ -25,10 +30,7 @@ function App() {
   const getResponse = async () => {
     try {
       setIsLoading(true);
-      const { data } = await axios.post(
-        "https://chatgpt-demo-production.up.railway.app/api/generate",
-        formData
-      );
+      const { data } = await axios.post(url, formData);
       console.log(data);
       if (data.status === "success") {
         //save response in content variable
