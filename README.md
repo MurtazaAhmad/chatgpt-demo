@@ -23,7 +23,7 @@ A ChatGPT API Implementation demo project using React (Vite), Typescript & Expre
    ```bash
    $ npm install
    ```
-7. Make a copy of the example environment variables file
+7. Make a copy of the example environment variables file in server directory
 
    On Linux systems: 
    ```bash
